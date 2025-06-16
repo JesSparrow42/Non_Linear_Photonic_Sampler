@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bosonsampler-wrapper"
+version = "0.1.0"
+description = "Photonic boson-sampling simulator with linear and QD-nonlinear models"
+authors = [{ name = "Oliver Norregaard", email = "oliver.norregaard@sparrowquantum.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy>=1.23",
+    "torch>=2.2",
+    "numba>=0.58 ; platform_machine=='x86_64' and platform_system!='Darwin'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "ruff"]
+
+[tool.setuptools]
+packages = ["bosonsampler"]
