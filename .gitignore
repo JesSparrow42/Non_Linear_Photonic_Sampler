@@ -6,12 +6,6 @@ __pycache__/
 # C extensions
 *.so
 
-# Ignore heavy folders
-model_checkpoints/
-Tests/
-data/
-run12
-
 # Distribution / packaging
 .Python
 build/
